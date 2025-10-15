@@ -1,0 +1,113 @@
+
+#poker-table {
+height: 100vh;
+width: 100vw;
+display: grid;
+grid-template-columns: repeat(12, 1fr);
+grid-template-rows: repeat(12, 1fr);
+gap: 12px;
+background: green;
+padding: 20px;
+}
+
+/* Boxes */
+.player-box, .community-box, .controls {
+background: green;
+border: 2px solid white;
+border-radius: 12px;
+color: white;
+display: grid;
+place-items: center;
+padding: 10px;
+}
+
+/* Place the five boxes on the table */
+.player2 { 
+grid-column: 1 / 4; 
+grid-row: 3 / 7; 
+}
+
+.community-box {
+grid-column: 4 / 10; 
+grid-row: 2 / 8; 
+}
+
+.player3 { 
+grid-column: 10 / 13; 
+grid-row: 3 / 7; 
+}
+
+.player1 { 
+grid-column: 4 / 10; 
+grid-row: 8 / 11; 
+}
+
+.controls { 
+grid-column: 4 / 10; 
+grid-row: 11 / 13; 
+}
+
+
+/* Inside player/community boxes */
+.player-box {
+grid-template-rows: auto 1fr auto;
+gap: 8px;
+}
+
+.player-box .name {
+font-weight: 700;
+}
+
+.player-hand, .com-hand-1, .com-hand-2, .community-board {
+width: 100%;
+min-height: 80px;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+}
+
+#user-wallet, #com1-wallet, #com2-wallet {
+padding: 6px 10px;
+border: 1px solid white;
+border-radius: 8px;
+}
+
+/* Community box layout */
+.community-box {
+grid-template-rows: auto auto 1fr;
+gap: 8px;
+}
+
+#pot {
+padding: 6px 10px;
+border: 1px solid white;
+border-radius: 8px;
+}
+
+.community-title {
+font-weight: 700;
+opacity: 0.9;
+}
+
+/* Controls: 5 buttons per row, centered */
+.controls {
+display: grid;
+grid-template-columns: repeat(5, 1fr);
+grid-template-rows: repeat(2, auto);
+gap: 12px;
+align-content: center;
+justify-items: center;
+}
+
+/* Buttons (reuse your simple style) */
+button {
+align-self: center;
+justify-self: center;
+padding: 10px 14px;
+border-radius: 10px;
+background: black;
+color: white;
+cursor: pointer;
+border: none;
+}
